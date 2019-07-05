@@ -24,7 +24,15 @@ if(strpos($text, "/start") === 0 ) {
 	$response = "Ciao $firstname! \nMi presento, sono SinfoBot, digita il comando /help per sapere cosa posso dirti!";
 	sendMsg($chatId, $response);
 }
-
+Switch ($text) {
+	case "/help";
+	     sendMessage ($chatId, "I miei comandi li devi scrivere mettendo il / di fianco sennò non funziono e sono i seguenti: discord, social, patreon");
+		 Break;
+		 default:
+		 if (is_numeric($text)){
+			 }else{
+				 sendMessage($chatId, "Hey! Il comando è sbagliato! Digita /help per sapere cosa posso dirti!");
+				 }
 function sendMsg($id, $msg) {
 	$token = "896573323:AAFOIK79Fixmi4ECOlmeAgjOiIgMj93TxY8";
 
