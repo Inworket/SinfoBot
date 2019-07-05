@@ -23,9 +23,6 @@ $response = "";
 if(strpos($text, "/start") === 0 ) {
 	$response = "Ciao $firstname! \nMi presento, sono SinfoBot, digita il comando /help per sapere cosa posso dirti!";
 	sendMsg($chatId, $response);
-	if(strpos($text, "/help") === 0 ) {
-	$response = "I miei comandi li devi scrivere mettendo il / di fianco sennò non funziono e sono i seguenti: discord, social, patreon";
-	sendMsg($chatId, $response);
 }
 
 function sendMsg($id, $msg) {
